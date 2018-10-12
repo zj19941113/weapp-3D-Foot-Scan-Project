@@ -319,7 +319,7 @@ Response 200
 
 #### 获取资源 `GET {base_url}/uploads/{filename}`
 
-例如: 以 `GET` 方式请求 https://ntfxnyrz.qcloud.la/uploads/58-1526733386.jpg 会接收到图片资源
+例如: 以 `GET` 方式请求 https://bb/uploads/58-1526733386.jpg 会接收到图片资源
 
 ### 更多模块
 
