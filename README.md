@@ -87,7 +87,7 @@ Request (application/json)
 
 ```json
 {
-    "code": , // 微信服务器反回的js_code
+    "code": , 
 }
 ```
 
@@ -193,9 +193,8 @@ Request (application/json)
 {
     "openid": "olSoJ4z-Z7b4N8cQcFOUE2kjxBs0",
     "token": "0e454b9657852ed68d633b092e7e3f07",
-    "beg": 0, //需要查询的起始索引
-    "num": 10, //需要查询的个数
-    //如 beg=0, num=10, 则返回前10条数据。
+    "beg": 0, 
+    "num": 10, 
 }
 ```
 
@@ -240,7 +239,7 @@ Response 200
                     "zugong2": 0,
                     "muzhifandu2": 0, 
                 }
-                ...
+               
             ]
         }
     }
@@ -254,7 +253,7 @@ Request (application/json)
 {
     "openid": "olSoJ4z-Z7b4N8cQcFOUE2kjxBs0",
     "token": "0e454b9657852ed68d633b092e7e3f07",
-    "locate": 1001  //陕西西安
+    "locate": 1001  
 }
 ```
 
@@ -281,7 +280,7 @@ Response 200
                     "name": "西安交通大学兴庆校区科学馆",
                     "detail": "咸宁西路28号西安交通大学",
                 }
-                ...
+             
             ]
         }
     }
