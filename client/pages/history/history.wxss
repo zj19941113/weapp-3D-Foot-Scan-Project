@@ -1,0 +1,90 @@
+/* pages/history.wxss */
+/* pages/my/my.wxss */
+.head{
+background-color:#31859c;
+justify-content:center;
+display:flex;
+}
+.userinfo {
+display:flex;
+flex-direction:column;
+align-items:center;
+background-color:#31859c;
+}
+
+.userinfo-avatar {
+width: 128rpx;
+height: 128rpx;
+border-radius: 50%;
+margin-top:20rpx;
+margin-bottom:20rpx;
+}
+
+.userinfo-nickname {
+color:white;
+font-size:32rpx;
+overflow:hidden;
+white-space:nowrap;
+text-overflow:ellipsis;
+margin-bottom:72rpx
+}
+
+.phone{
+color:white;
+font-size:24rpx;
+margin-bottom:88rpx;
+display:flex;
+align-items:center;
+}
+
+.edit{
+width:25rpx;
+height:25rpx;
+margin-left:15rpx;
+}
+
+.historybody{
+display:flex;
+margin:0rpx 30rpx;
+flex-direction:column;
+}
+
+.recordtime{
+color:#939494;
+font-size:28rpx;
+border-bottom:1rpx solid #efeff4;
+height:80rpx;
+display:flex;
+align-items:center;
+}
+.lrfoot-list{
+display:flex;
+align-items:center;
+}
+.foot-img{
+height:60rpx;
+width:60rpx;
+}
+.foot-list{
+display:flex;
+align-items:center;
+justify-content:center;
+flex-wrap:wrap;
+width:100%;
+}
+.foot-list-item{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+width:100rpx;
+height:120rpx;
+}
+.footdata{
+font-size:30rpx;
+}
+.footdatatype{
+font-size:22rpx;
+color:#939494;
+margin-top:5rpx;
+}

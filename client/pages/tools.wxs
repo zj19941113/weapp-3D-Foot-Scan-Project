@@ -1,0 +1,65 @@
+var bar1 = function (num) {
+  var des = ''
+  if (num == 0) {
+    des = '正常'
+  }
+  if (num == 1) {
+    des = '较高足弓'
+  }
+  if (num == 2) {
+    des = '高足弓'
+  }
+  if (num == -2) {
+    des = '低足弓'
+  }
+  if (num == -1) {
+    des = '较低足弓'
+  }
+
+  return des;
+}
+
+
+var bar2 = function (num) {
+  var des = ''
+  if (num == 0) {
+    des = '正常'
+  }
+  if (num == 1) {
+    des = '轻度外翻'
+  }
+  if (num == 2) {
+    des = '中度外翻'
+  }
+  if (num == 3) {
+    des = '重度外翻'
+  }
+
+  return des;
+}
+
+
+var bar3 = function (time) {
+  var year = time.substring(0, 4);
+  var month = time.substring(5, 6) == 0 ? time.substring(6, 7) : time.substring(5, 7);
+  var day = time.substring(8, 9) == 0 ? time.substring(9, 10) : time.substring(8, 10);
+  return year + '年' + month + '月' + day + '日' ;
+}
+
+var bar4 = function (long) {
+  var ans = ''
+  if (long >= 1000 && long < 99900) {
+    var num = long / 1000 
+    num = num.toFixed(1);
+    ans = num + '公里'
+  }
+  if ( long >= 99900) {
+    ans ='99.9+公里'
+  }
+  if (long < 1000) {
+    ans = long + '米'
+  }
+  return ans;
+}
+
+module.exports = { bar1: bar1, bar2: bar2, bar3: bar3, bar4: bar4,};

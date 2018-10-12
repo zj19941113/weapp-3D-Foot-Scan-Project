@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/message/message",
+    "pages/history/history",
+    "pages/testupload/testupload",
+    "pages/duizhao/duizhao",
+    "pages/omlinemarket/omlinemarket",
+    "pages/locatemarket/locatemarket"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#31859c",
+    "navigationBarTitleText": "3D足型扫描",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "backgroundColor": "white",
+    "color": "#87898a",
+    "selectedColor": "#31859c",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/index1.png",
+        "selectedIconPath": "img/index3.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "码数",
+        "iconPath": "img/message1.png",
+        "selectedIconPath": "img/message3.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "img/my1.png",
+        "selectedIconPath": "img/my3.png"
+      }
+    ]
+  }
+}

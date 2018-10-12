@@ -1,0 +1,60 @@
+/* pages/my/my.wxss */
+page{
+background-color:#f6f6f6;
+}
+.userinfo {
+display:flex;
+flex-direction:row;
+width:100%;
+align-items:center;
+background-color:#31859c;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  margin:40rpx 20rpx 60rpx 40rpx;
+
+}
+
+.userinfo-nickname {
+display:flex;
+color: #ffffff;
+font-size:32rpx;
+width:180rpx;
+overflow:hidden;
+white-space:nowrap;
+text-overflow:ellipsis;
+}
+.my-list{
+display:flex;
+flex-direction:column;
+margin-top:30rpx
+}
+.my-item{
+display:flex;
+align-items:center;
+background-color:white;
+width:100%;
+border-bottom:1px solid #f6f6f6;
+position:relative;
+
+}
+.mylogo-img{
+width:40rpx;
+height:40rpx;
+margin:30rpx;
+}
+.my-text{
+font-size:28rpx;
+margin-left:10rpx;
+}
+
+.right-img{
+width:40rpx;
+height:50rpx;
+right:50rpx;
+position:absolute;
+
+}

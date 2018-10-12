@@ -1,0 +1,62 @@
+<!--index.wxml-->
+<wxs src="./../tools.wxs" module="tools" />
+<view wx:if="{{!logined}}" class="login" > 
+  <image class='login-img' mode="aspectFill" src="../../img/shouping.jpg" ></image>
+  <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="shouquan">跳过</button>
+</view>
+
+<view wx:else class="layout-column">
+  <image class='leftfootpic' src="../../img/leftfoot.png" ></image>
+  <image class='rightfootpic' src="../../img/rightfoot.png" ></image>
+  <view class="layout-column" style='align-items:center'>
+  <view class="gettime">-- {{year}}年{{month}}月{{day}}日 测量 --</view>   
+  <view class="mydata" >我的数据报告</view>  
+  <image class='tiaotiao' mode="aspectFill" src="../../img/tiaotiao.png" ></image>
+  </view>
+
+  <view class="layout-row footdatas" style='margin-top:100rpx' >
+    <view class="leftdata">{{Message[0].footlength}}mm —</view> 
+    <image class='footlogo' mode="aspectFill" src="../../img/footlength.png" ></image>
+    <view class="rightdata">— {{Message[0].footlength2}}mm</view> 
+  </view> 
+  <view class="footlogotext" >长度</view>
+
+  <view class="layout-row footdatas">
+    <view class="leftdata">{{Message[0].footwidth}}mm —</view> 
+    <image class='footlogo' mode="aspectFill" src="../../img/footwidth.png" ></image>
+    <view class="rightdata">— {{Message[0].footwidth2}}mm</view> 
+  </view> 
+  <view class="footlogotext" >宽度</view>
+
+  <view class="layout-row footdatas">
+    <view class="leftdata">{{Message[0].footheight}}mm —</view> 
+    <image class='footlogo' mode="aspectFill" src="../../img/footheight.png" ></image>
+    <view class="rightdata">— {{Message[0].footheight2}}mm</view> 
+  </view> 
+  <view class="footlogotext" >足高</view>
+
+  <view class="layout-row footdatas">
+    <view class="leftdata">{{Message[0].perimeter}}mm —</view> 
+    <image class='footlogo' mode="aspectFill" src="../../img/perimeter.png" ></image>
+    <view class="rightdata">— {{Message[0].perimeter2}}mm</view> 
+  </view> 
+  <view class="footlogotext" >围度</view>
+
+  <view class="layout-row footdatas">
+    <view class="leftdata">{{tools.bar1(Message[0].zugong)}} —</view> 
+    <image class='footlogo' mode="aspectFill" src="../../img/zugong.png" ></image>
+    <view class="rightdata">— {{tools.bar1(Message[0].zugong2)}}</view> 
+  </view> 
+  <view class="footlogotext" >足弓</view>
+
+  <view class="layout-row footdatas">
+    <view class="leftdata">{{tools.bar2(Message[0].muzhifandu)}} —</view> 
+    <image class='footlogo' mode="aspectFill" src="../../img/muzhifandu.png" ></image>
+    <view class="rightdata">— {{tools.bar2(Message[0].muzhifandu2)}}</view> 
+  </view> 
+  <view class="footlogotext" >拇指翻度</view>
+
+  <view class="history" style='margin-top:80rpx' bindtap="tohistory">查看历史测量记录</view>
+  <view class="history" bindtap="totestupload">点击添加测量数据</view>
+
+</view>

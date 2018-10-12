@@ -1,0 +1,243 @@
+<view class="swiper-tab" >
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+  <image class='gender' mode='aspectFit' data-current="0"  src="{{currentTab==0 ? '../../img/boy.png' : '../../img/boy2.png'}}" ></image>
+  <view class="swiper-tab-text"  data-current="0" >男生尺码</view>
+  </view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+  <image class='gender'  mode='aspectFit'  data-current="1" src="{{currentTab==1 ? '../../img/girl.png' : '../../img/girl2.png'}}"></image>
+  <view class="swiper-tab-text"  data-current="1" >女生尺码</view>
+  </view>
+</view>
+
+<!--boy currentTab==0 -->
+<view wx:if ='{{currentTab==0}}'  class="ma-list">
+<view class="ma-list-row" style='background-color:#72b5c8'>
+<view class="ma-list-item"><text  class="ma-list-num2">中国(旧)</text><text class="ma-list-num2">(CHN)</text></view>
+<view class="ma-list-item"><text class="ma-list-num2">中国(新)</text><text class="ma-list-num2">(CHN)</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num2">欧码</text><text class="ma-list-num2">(EUR)</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num2">美码</text><text class="ma-list-num2">(US)</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num2">英码</text><text class="ma-list-num2">(UK)</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num2">日码</text><text class="ma-list-num2">(JP)</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item"><text  class="ma-list-num">36</text></view>
+<view class="ma-list-item"><text class="ma-list-num">230</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">37.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">--</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">--</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">23.0</text></view>
+</view>
+<view class="ma-list-row">
+<view class="ma-list-item"><text  class="ma-list-num">37</text></view>
+<view class="ma-list-item"><text class="ma-list-num">235</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">37.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">5.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">4.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">23.5</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item"><text  class="ma-list-num">38</text></view>
+<view class="ma-list-item"><text class="ma-list-num">240</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">38.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">5.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">5.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">24.0</text></view>
+</view>
+<view class="ma-list-row">
+<view class="ma-list-item"><text  class="ma-list-num">39</text></view>
+<view class="ma-list-item"><text class="ma-list-num">245</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">38.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">6.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">5.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">24.5</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item"><text  class="ma-list-num">40</text></view>
+<view class="ma-list-item"><text class="ma-list-num">250</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">39.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">7.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">6.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">25.0</text></view>
+</view>
+<view class="ma-list-row">
+<view class="ma-list-item"><text  class="ma-list-num">41</text></view>
+<view class="ma-list-item"><text class="ma-list-num">255</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">40.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">7.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">7.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">25.5</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item"><text  class="ma-list-num">42</text></view>
+<view class="ma-list-item"><text class="ma-list-num">260</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">41.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">8.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">7.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">26..0</text></view>
+</view>
+<view class="ma-list-row">
+<view class="ma-list-item"><text  class="ma-list-num">43</text></view>
+<view class="ma-list-item"><text class="ma-list-num">265</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">42.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">8.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">8.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">26.5</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item"><text  class="ma-list-num">44</text></view>
+<view class="ma-list-item"><text class="ma-list-num">270</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">43.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">9.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">8.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">27.0</text></view>
+</view>
+<view class="ma-list-row">
+<view class="ma-list-item"><text  class="ma-list-num">45</text></view>
+<view class="ma-list-item"><text class="ma-list-num">275</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">43.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">9.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">9.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">27.5</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item"><text  class="ma-list-num">46</text></view>
+<view class="ma-list-item"><text class="ma-list-num">280</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">44.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">10.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">9.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">28.0</text></view>
+</view>
+<view class="ma-list-row">
+<view class="ma-list-item"><text  class="ma-list-num">47</text></view>
+<view class="ma-list-item"><text class="ma-list-num">285</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">44.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">11.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">10.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">28.5</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item"><text  class="ma-list-num">48</text></view>
+<view class="ma-list-item"><text class="ma-list-num">290</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">45.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">11.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">11.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">29.0</text></view>
+</view>
+</view>
+
+
+<!--girl currentTab==1 -->
+<view wx:if ='{{currentTab==1}}'  class="ma-list">
+<view class="ma-list-row" style='background-color:#72b5c8'>
+<view class="ma-list-item"><text  class="ma-list-num2">中国(旧)</text><text class="ma-list-num2">(CHN)</text></view>
+<view class="ma-list-item"><text class="ma-list-num2">中国(新)</text><text class="ma-list-num2">(CHN)</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num2">欧码</text><text class="ma-list-num2">(EUR)</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num2">美码</text><text class="ma-list-num2">(US)</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num2">英码</text><text class="ma-list-num2">(UK)</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num2">日码</text><text class="ma-list-num2">(JP)</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item"><text  class="ma-list-num">32</text></view>
+<view class="ma-list-item"><text class="ma-list-num">210</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">35.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">--</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">--</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">21.0</text></view>
+</view>
+<view class="ma-list-row">
+<view class="ma-list-item"><text  class="ma-list-num">33</text></view>
+<view class="ma-list-item"><text class="ma-list-num">215</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">35.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">--</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">2.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">21.5</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item"><text  class="ma-list-num">34</text></view>
+<view class="ma-list-item"><text class="ma-list-num">220</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">36.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">4.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">2.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">22.0</text></view>
+</view>
+<view class="ma-list-row">
+<view class="ma-list-item"><text  class="ma-list-num">35</text></view>
+<view class="ma-list-item"><text class="ma-list-num">225</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">37.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">4.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">3.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">22.5</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item"><text  class="ma-list-num">36</text></view>
+<view class="ma-list-item"><text class="ma-list-num">230</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">37.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">5.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">3.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">23.0</text></view>
+</view>
+<view class="ma-list-row">
+<view class="ma-list-item"><text  class="ma-list-num">37</text></view>
+<view class="ma-list-item"><text class="ma-list-num">235</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">38.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">5.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">4.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">23.5</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item"><text  class="ma-list-num">38</text></view>
+<view class="ma-list-item"><text class="ma-list-num">240</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">38.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">6.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">4.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">24..0</text></view>
+</view>
+<view class="ma-list-row">
+<view class="ma-list-item"><text  class="ma-list-num">39</text></view>
+<view class="ma-list-item"><text class="ma-list-num">245</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">39.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">7.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">5.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">24.5</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item"><text  class="ma-list-num">40</text></view>
+<view class="ma-list-item"><text class="ma-list-num">250</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">40.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">7.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">6.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">25.0</text></view>
+</view>
+<view class="ma-list-row">
+<view class="ma-list-item"><text  class="ma-list-num">41</text></view>
+<view class="ma-list-item"><text class="ma-list-num">255</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">40.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">8.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">6.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">25.5</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item"><text  class="ma-list-num">42</text></view>
+<view class="ma-list-item"><text class="ma-list-num">260</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">41.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">8.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">7.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">26.0</text></view>
+</view>
+<view class="ma-list-row">
+<view class="ma-list-item"><text  class="ma-list-num">43</text></view>
+<view class="ma-list-item"><text class="ma-list-num">265</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">41.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">9.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">8.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">26.5</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item"><text  class="ma-list-num">44</text></view>
+<view class="ma-list-item"><text class="ma-list-num">270</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">42.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">10.0</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">8.5</text></view>
+<view class="ma-list-item" ><text  class="ma-list-num">27.0</text></view>
+</view>
+</view>

@@ -1,0 +1,37 @@
+<form bindsubmit="formSubmit" >
+<view  wx:if="{{selectstyle == 1}}" style='padding:30rpx;'> 
+<text >\n</text>
+<text >左足:长度  宽度  足高  围度  足弓  拇指翻度</text>
+<input  maxlength="3"  name="var1" value="253"/>
+<input  maxlength="2"  name="var2" value="91" />
+<input  maxlength="2"  name="var3" value="63" />
+<input  maxlength="3"  name="var4" value="245" />
+<input  maxlength="2"  name="var5" value="0" />
+<input  maxlength="1"  name="var6" value="0" />
+<text >右足:长度  宽度  足高  围度  足弓  拇指翻度</text>
+<input  maxlength="3"  name="var7" value="242" />
+<input  maxlength="2"  name="var8" value="93" />
+<input  maxlength="2"  name="var9" value="58" />
+<input  maxlength="3"  name="var10" value="256" />
+<input  maxlength="2"  name="var11" value="0" />
+<input  maxlength="1"  name="var12" value="0" />
+<text >\n</text>
+<view class="xiaobiaoti">添加图片</view>
+<view class="border" style='flex-wrap:wrap;'>
+<block wx:for="{{Images}}" wx:for-index="index" wx:for-item="Image" wx:key="*this">
+  <image mode="aspectFill" bindtap='previewImage' data-num="{{index}}"  class="image-attach" src="{{Image}}"  wx:if="{{index<9}}"></image>
+  <icon class="clear" data-num="{{index}}" bindtap="clearImage" type="clear" size="15" color="grey"/>
+</block>
+<image class="image-attach" bindtap='addAttach' src="../../img/jia.png"></image>
+</view>
+</view>
+<text >\n</text>
+<view  wx:if="{{selectstyle == 0}}" style='text-align:center;text-decoration:underline;' bindtap="submitnum">点我手动输入数据</view> 
+<text >\n</text> 
+<view >  
+  <view wx:if="{{selectstyle == 0}}"  style='text-align:center;text-decoration:underline;' bindtap="click">点我扫码获得数据</view>  
+  <view wx:if="{{selectstyle == -1}}" style='margin:20rpx'>{{show}}</view>  
+</view>
+<text >\n</text>
+<button  type="primary" size="default" style="background-color:#31859c;width:650rpx;" formType="submit" >提交</button>
+</form>

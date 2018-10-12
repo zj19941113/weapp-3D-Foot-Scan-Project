@@ -1,0 +1,57 @@
+/* pages/duizhao/duizhao.wxss */
+.swiper-tab{  
+width:100%;
+display:flex;
+margin-top: 20rpx
+}  
+.swiper-tab-list{  
+    width: 50%;  
+    color:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30rpx;
+    height:100rpx;
+    background:#F6F6F6;
+} 
+.on{ 
+    color:white ;  
+    background-color: #31859c
+}  
+.gender{
+width:40rpx;
+height:40rpx;
+margin:6rpx;
+}
+.ma-list{
+  display:flex;
+flex-direction:column;
+}
+.ma-list-row{
+  display:flex;
+align-items:center;
+width:100%;
+height:100rpx;
+
+}
+.ma-list-item{
+width:33%;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+}
+.ma-list-num{
+font-size:32rpx;
+color:black;
+}
+.ma-list-num2{
+font-size:30rpx;
+color:white;
+}
+.ma-list-text{
+font-size:28rpx;
+color:#939494;
+margin-left:10rpx;
+
+}

@@ -1,0 +1,445 @@
+<!--pages/message/message.wxml-->
+
+<view class="suggest" style='margin-top:20rpx;'>根据您的足长为您推荐 <text class="suggestnote" >240码（仅供参考）</text></view>
+<view class="suggest" style='margin-bottem:20rpx;'>不同品牌、鞋款的版型可能存在偏差，敬请谅解</view>
+<view class="swiper-tab" >
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">
+  <image class='gender' mode='aspectFit' data-current="0"  src="{{currentTab==0 ? '../../img/boy.png' : '../../img/boy2.png'}}" ></image>
+  <view class="swiper-tab-text"  data-current="0" >男生尺码</view>
+  </view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">
+  <image class='gender'  mode='aspectFit'  data-current="1" src="{{currentTab==1 ? '../../img/girl.png' : '../../img/girl2.png'}}"></image>
+  <view class="swiper-tab-text"  data-current="1" >女生尺码</view>
+  </view>
+</view>
+
+<!--boy currentTab==0 -->
+<view wx:if ='{{currentTab==0}}'>
+<view class="ma-style" style="background:{{has_xiala==0 ? '#f3f3f3': '#e0f1f6'}}" >
+<image class='country' src="../../img/CN.jpg"></image>
+<text class="ma-text" style='width:184rpx' >中国码（旧）</text>
+<view class="ma-right" >
+<text wx:if ='{{has_select==1}}' class="ma-list-num" >{{cn}}</text><text  wx:if ='{{has_select==1}}'  class="ma-list-text" >码</text>
+<text  wx:if ='{{has_select==0}}' class="ma-text" bindtap="xiala">请选择</text>
+<image class="xiala-img" src="{{has_xiala==0 ? '../../img/xiala.png' : '../../img/hua.png'}}" bindtap="xiala"></image>
+</view>
+</view>
+<view  wx:if ='{{has_xiala==1}}'  class="ma-list">
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel11"><text  class="ma-list-num" style="color:{{sel11 ==1? '#31859c':'black'}}" >36</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel12"><text class="ma-list-num" style="color:{{sel12 ==1? '#31859c':'black'}}"  >37</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel13"><text  class="ma-list-num" style="color:{{sel13 ==1? '#31859c':'black'}}"  >38</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel21"><text class="ma-list-num" style="color:{{sel21 ==1? '#31859c':'black'}}"  >39</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel22"><text  class="ma-list-num" style="color:{{sel22 ==1? '#31859c':'black'}}"  >40</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel23"><text  class="ma-list-num" style="color:{{sel23 ==1? '#31859c':'black'}}"  >41</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel31"><text   class="ma-list-num" style="color:{{sel31 ==1? '#31859c':'black'}}"  >42</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel32"><text   class="ma-list-num" style="color:{{sel32 ==1? '#31859c':'black'}}"  >43</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel33"><text  class="ma-list-num" style="color:{{sel33 ==1? '#31859c':'black'}}"  >44</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel41"><text   class="ma-list-num" style="color:{{sel41 ==1? '#31859c':'black'}}"  >45</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel42"><text  class="ma-list-num" style="color:{{sel42 ==1? '#31859c':'black'}}"  >46</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel43"><text  class="ma-list-num" style="color:{{sel43 ==1? '#31859c':'black'}}"  >47</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel51"><text  class="ma-list-num" style="color:{{sel51 ==1? '#31859c':'black'}}"  >48</text><text class="ma-list-text" >码</text></view>
+</view>
+</view>
+
+<view class="ma-style" style="background:{{has_xiala_cn2==0 ? '#F6F6F6': '#e0f1f6'}}" >
+<image class='country' src="../../img/CN.jpg"></image>
+<text class="ma-text" style='width:184rpx' >中国码（新）</text>
+<view class="ma-right" >
+<text wx:if ='{{has_select==1}}' class="ma-list-num" >{{cn2}}</text><text  wx:if ='{{has_select==1}}'  class="ma-list-text" >码</text>
+<text  wx:if ='{{has_select==0}}' class="ma-text" bindtap="xiala_cn2">请选择</text>
+<image class="xiala-img" src="{{has_xiala_cn2==0 ? '../../img/xiala.png' : '../../img/hua.png'}}" bindtap="xiala_cn2"></image>
+</view>
+</view>
+
+<view  wx:if ='{{has_xiala_cn2==1}}'  class="ma-list">
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel11"><text class="ma-list-num" style="color:{{sel11 ==1? '#31859c':'black'}}" >230</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel12"><text class="ma-list-num" style="color:{{sel12 ==1? '#31859c':'black'}}"  >235</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel13"><text class="ma-list-num" style="color:{{sel13 ==1? '#31859c':'black'}}"  >240</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel21"><text class="ma-list-num" style="color:{{sel21 ==1? '#31859c':'black'}}"  >245</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel22"><text class="ma-list-num" style="color:{{sel22 ==1? '#31859c':'black'}}"  >250</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel23"><text class="ma-list-num" style="color:{{sel23 ==1? '#31859c':'black'}}"  >255</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel31"><text class="ma-list-num" style="color:{{sel31 ==1? '#31859c':'black'}}"  >260</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel32"><text class="ma-list-num" style="color:{{sel32 ==1? '#31859c':'black'}}"  >265</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel33"><text class="ma-list-num" style="color:{{sel33 ==1? '#31859c':'black'}}"  >270</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel41"><text class="ma-list-num" style="color:{{sel41 ==1? '#31859c':'black'}}"  >275</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel42"><text class="ma-list-num" style="color:{{sel42 ==1? '#31859c':'black'}}"  >280</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel43"><text class="ma-list-num" style="color:{{sel43 ==1? '#31859c':'black'}}"  >285</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel51"><text class="ma-list-num" style="color:{{sel51 ==1? '#31859c':'black'}}"  >290</text><text class="ma-list-text" >码</text></view>
+</view>
+</view>
+
+<view class="ma-style"   style="background:{{has_xiala_eur==0 ? '#f3f3f3': '#e0f1f6'}}" >
+<image class='country' src="../../img/EUR.jpg"></image>
+<text class="ma-text" style='width:184rpx'>欧码</text>
+<view class="ma-right" >
+<text wx:if ='{{has_select==1}}' class="ma-list-num" >{{eur}}</text><text  wx:if ='{{has_select==1}}'  class="ma-list-text" >码</text>
+<text  wx:if ='{{has_select==0}}' class="ma-text" bindtap="xiala_eur">请选择</text>
+<image class="xiala-img" src="{{has_xiala_eur==0 ? '../../img/xiala.png' : '../../img/hua.png'}}" bindtap="xiala_eur"></image>
+</view>
+</view>
+<view  wx:if ='{{has_xiala_eur==1}}'  class="ma-list">
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel11"><text class="ma-list-num" style="color:{{sel11 ==1? '#31859c':'black'}}">37.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel12"><text class="ma-list-num" style="color:{{sel12 ==1? '#31859c':'black'}}">37.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel13"><text class="ma-list-num" style="color:{{sel13 ==1? '#31859c':'black'}}">38.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel21"><text class="ma-list-num" style="color:{{sel21 ==1? '#31859c':'black'}}">38.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel22"><text class="ma-list-num" style="color:{{sel22 ==1? '#31859c':'black'}}">39.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel23"><text class="ma-list-num" style="color:{{sel23 ==1? '#31859c':'black'}}">40.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel31"><text class="ma-list-num" style="color:{{sel31 ==1? '#31859c':'black'}}">41.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel32"><text class="ma-list-num" style="color:{{sel32 ==1? '#31859c':'black'}}">42.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel33"><text class="ma-list-num" style="color:{{sel33 ==1? '#31859c':'black'}}">43.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel41"><text class="ma-list-num" style="color:{{sel41 ==1? '#31859c':'black'}}">43.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel42"><text class="ma-list-num" style="color:{{sel42 ==1? '#31859c':'black'}}">44.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel43"><text class="ma-list-num" style="color:{{sel43 ==1? '#31859c':'black'}}">44.5</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel51"><text class="ma-list-num" style="color:{{sel51 ==1? '#31859c':'black'}}">45.0</text><text class="ma-list-text" >码</text></view>
+</view>
+</view>
+
+<view class="ma-style"   style="background:{{has_xiala_us==0 ? '#F6F6F6': '#e0f1f6'}}">
+<image class='country' src="../../img/US.jpg"></image>
+<text class="ma-text" style='width:184rpx'>美码</text>
+<view class="ma-right" >
+<text wx:if ='{{has_select==1}}' class="ma-list-num" >{{us}}</text><text  wx:if ='{{has_select==1}}'  class="ma-list-text" >码</text>
+<text  wx:if ='{{has_select==0}}' class="ma-text" bindtap="xiala_us">请选择</text>
+<image class="xiala-img" src="{{has_xiala_us==0 ? '../../img/xiala.png' : '../../img/hua.png'}}" bindtap="xiala_us"></image>
+</view>
+</view>
+<view  wx:if ='{{has_xiala_us==1}}'  class="ma-list">
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel11"><text class="ma-list-num" style="color:{{sel11 ==1? '#31859c':'black'}}"> -- </text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel12"><text class="ma-list-num" style="color:{{sel12 ==1? '#31859c':'black'}}">5.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel13"><text class="ma-list-num" style="color:{{sel13 ==1? '#31859c':'black'}}">5.5</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel21"><text class="ma-list-num" style="color:{{sel21 ==1? '#31859c':'black'}}">6.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel22"><text class="ma-list-num" style="color:{{sel22 ==1? '#31859c':'black'}}">7.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel23"><text class="ma-list-num" style="color:{{sel23 ==1? '#31859c':'black'}}">7.5</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel31"><text class="ma-list-num" style="color:{{sel31 ==1? '#31859c':'black'}}">8.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel32"><text class="ma-list-num" style="color:{{sel32 ==1? '#31859c':'black'}}">8.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel33"><text class="ma-list-num" style="color:{{sel33 ==1? '#31859c':'black'}}">9.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel41"><text class="ma-list-num" style="color:{{sel41 ==1? '#31859c':'black'}}">9.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel42"><text class="ma-list-num" style="color:{{sel42 ==1? '#31859c':'black'}}">10.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel43"><text class="ma-list-num" style="color:{{sel43 ==1? '#31859c':'black'}}">11.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel51"><text class="ma-list-num" style="color:{{sel51 ==1? '#31859c':'black'}}">11.5</text><text class="ma-list-text" >码</text></view>
+</view>
+</view>
+
+<view class="ma-style"  style="background:{{has_xiala_uk==0 ? '#f3f3f3': '#e0f1f6'}}" >
+<image class='country' src="../../img/UK.jpg"></image>
+<text class="ma-text" style='width:184rpx'>英码</text>
+<view class="ma-right" >
+<text wx:if ='{{has_select==1}}' class="ma-list-num" >{{uk}}</text><text  wx:if ='{{has_select==1}}'  class="ma-list-text" >码</text>
+<text  wx:if ='{{has_select==0}}' class="ma-text" bindtap="xiala_uk">请选择</text>
+<image class="xiala-img" src="{{has_xiala_uk==0 ? '../../img/xiala.png' : '../../img/hua.png'}}" bindtap="xiala_uk"></image>
+</view>
+</view>
+<view  wx:if ='{{has_xiala_uk==1}}'  class="ma-list">
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel11"><text class="ma-list-num" style="color:{{sel11 ==1? '#31859c':'black'}}"> -- </text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel12"><text class="ma-list-num" style="color:{{sel12 ==1? '#31859c':'black'}}">4.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel13"><text class="ma-list-num" style="color:{{sel13 ==1? '#31859c':'black'}}">5.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel21"><text class="ma-list-num" style="color:{{sel21 ==1? '#31859c':'black'}}">5.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel22"><text class="ma-list-num" style="color:{{sel22 ==1? '#31859c':'black'}}">6.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel23"><text class="ma-list-num" style="color:{{sel23 ==1? '#31859c':'black'}}">7.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel31"><text class="ma-list-num" style="color:{{sel31 ==1? '#31859c':'black'}}">7.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel32"><text class="ma-list-num" style="color:{{sel32 ==1? '#31859c':'black'}}">8.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel33"><text class="ma-list-num" style="color:{{sel33 ==1? '#31859c':'black'}}">8.5</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel41"><text class="ma-list-num" style="color:{{sel41 ==1? '#31859c':'black'}}">9.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel42"><text class="ma-list-num" style="color:{{sel42 ==1? '#31859c':'black'}}">9.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel43"><text class="ma-list-num" style="color:{{sel43 ==1? '#31859c':'black'}}">10.5</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel51"><text class="ma-list-num" style="color:{{sel51 ==1? '#31859c':'black'}}">11.0</text><text class="ma-list-text" >码</text></view>
+</view>
+</view>
+
+<view class="ma-style"   style="background:{{has_xiala_jp==0 ? '#F6F6F6': '#e0f1f6'}}">
+<image class='country' src="../../img/JP.jpg"></image>
+<text class="ma-text" style='width:184rpx'>日码</text>
+<view class="ma-right" >
+<text wx:if ='{{has_select==1}}' class="ma-list-num" >{{jp}}</text><text  wx:if ='{{has_select==1}}'  class="ma-list-text" >码</text>
+<text  wx:if ='{{has_select==0}}' class="ma-text" bindtap="xiala_jp">请选择</text>
+<image class="xiala-img" src="{{has_xiala_jp==0 ? '../../img/xiala.png' : '../../img/hua.png'}}" bindtap="xiala_jp"></image>
+</view>
+</view>
+<view  wx:if ='{{has_xiala_jp==1}}'  class="ma-list">
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel11"><text class="ma-list-num" style="color:{{sel11 ==1? '#31859c':'black'}}">23.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel12"><text class="ma-list-num" style="color:{{sel12 ==1? '#31859c':'black'}}">23.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel13"><text class="ma-list-num" style="color:{{sel13 ==1? '#31859c':'black'}}">24.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel21"><text class="ma-list-num" style="color:{{sel21 ==1? '#31859c':'black'}}">24.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel22"><text class="ma-list-num" style="color:{{sel22 ==1? '#31859c':'black'}}">25.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel23"><text class="ma-list-num" style="color:{{sel23 ==1? '#31859c':'black'}}">25.5</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel31"><text class="ma-list-num" style="color:{{sel31 ==1? '#31859c':'black'}}">26.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel32"><text class="ma-list-num" style="color:{{sel32 ==1? '#31859c':'black'}}">26.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel33"><text class="ma-list-num" style="color:{{sel33 ==1? '#31859c':'black'}}">27.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel41"><text class="ma-list-num" style="color:{{sel41 ==1? '#31859c':'black'}}">27.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel42"><text class="ma-list-num" style="color:{{sel42 ==1? '#31859c':'black'}}">28.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel43"><text class="ma-list-num" style="color:{{sel43 ==1? '#31859c':'black'}}">28.5</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel51"><text class="ma-list-num" style="color:{{sel51 ==1? '#31859c':'black'}}">29.0</text><text class="ma-list-text" >码</text></view>
+</view>
+</view>
+</view>
+
+<!--girl currentTab==1 -->
+<view wx:if ='{{currentTab==1}}'>
+<view class="ma-style" style="background:{{has_xiala2==0 ? '#f3f3f3': '#e0f1f6'}}" >
+<image class='country' src="../../img/CN.jpg"></image>
+<text class="ma-text" style='width:184rpx' >中国码（旧）</text>
+<view class="ma-right" >
+<text wx:if ='{{has_select2==1}}' class="ma-list-num" >{{cn_2}}</text><text  wx:if ='{{has_select2==1}}'  class="ma-list-text" >码</text>
+<text  wx:if ='{{has_select2==0}}' class="ma-text" bindtap="xiala">请选择</text>
+<image class="xiala-img" src="{{has_xiala2==0 ? '../../img/xiala.png' : '../../img/hua.png'}}" bindtap="xiala"></image>
+</view>
+</view>
+<view  wx:if ='{{has_xiala2==1}}'  class="ma-list">
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel11"><text  class="ma-list-num" style="color:{{sel211 ==1? '#31859c':'black'}}" >32</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel12"><text class="ma-list-num" style="color:{{sel212 ==1? '#31859c':'black'}}"  >33</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel13"><text  class="ma-list-num" style="color:{{sel213 ==1? '#31859c':'black'}}"  >34</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel21"><text class="ma-list-num" style="color:{{sel221 ==1? '#31859c':'black'}}"  >35</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel22"><text  class="ma-list-num" style="color:{{sel222 ==1? '#31859c':'black'}}"  >36</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel23"><text  class="ma-list-num" style="color:{{sel223 ==1? '#31859c':'black'}}"  >37</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel31"><text   class="ma-list-num" style="color:{{sel231 ==1? '#31859c':'black'}}"  >38</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel32"><text   class="ma-list-num" style="color:{{sel232 ==1? '#31859c':'black'}}"  >39</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel33"><text  class="ma-list-num" style="color:{{sel233 ==1? '#31859c':'black'}}"  >40</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel41"><text   class="ma-list-num" style="color:{{sel241 ==1? '#31859c':'black'}}"  >41</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel42"><text  class="ma-list-num" style="color:{{sel242 ==1? '#31859c':'black'}}"  >42</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel43"><text  class="ma-list-num" style="color:{{sel243 ==1? '#31859c':'black'}}"  >43</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel51"><text  class="ma-list-num" style="color:{{sel251 ==1? '#31859c':'black'}}"  >44</text><text class="ma-list-text" >码</text></view>
+</view>
+</view>
+
+<view class="ma-style" style="background:{{has_xiala_cn22==0 ? '#F6F6F6': '#e0f1f6'}}" >
+<image class='country' src="../../img/CN.jpg"></image>
+<text class="ma-text" style='width:184rpx' >中国码（新）</text>
+<view class="ma-right" >
+<text wx:if ='{{has_select2==1}}' class="ma-list-num" >{{cn22}}</text><text  wx:if ='{{has_select2==1}}'  class="ma-list-text" >码</text>
+<text  wx:if ='{{has_select2==0}}' class="ma-text" bindtap="xiala_cn2">请选择</text>
+<image class="xiala-img" src="{{has_xiala_cn22==0 ? '../../img/xiala.png' : '../../img/hua.png'}}" bindtap="xiala_cn2"></image>
+</view>
+</view>
+
+<view  wx:if ='{{has_xiala_cn22==1}}'  class="ma-list">
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel11"><text class="ma-list-num" style="color:{{sel211 ==1? '#31859c':'black'}}" >210</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel12"><text class="ma-list-num" style="color:{{sel212 ==1? '#31859c':'black'}}"  >215</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel13"><text class="ma-list-num" style="color:{{sel213 ==1? '#31859c':'black'}}"  >220</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel21"><text class="ma-list-num" style="color:{{sel221 ==1? '#31859c':'black'}}"  >225</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel22"><text class="ma-list-num" style="color:{{sel222 ==1? '#31859c':'black'}}"  >230</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel23"><text class="ma-list-num" style="color:{{sel223 ==1? '#31859c':'black'}}"  >235</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel31"><text class="ma-list-num" style="color:{{sel231 ==1? '#31859c':'black'}}"  >240</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel32"><text class="ma-list-num" style="color:{{sel232 ==1? '#31859c':'black'}}"  >245</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel33"><text class="ma-list-num" style="color:{{sel233 ==1? '#31859c':'black'}}"  >250</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel41"><text class="ma-list-num" style="color:{{sel241 ==1? '#31859c':'black'}}"  >255</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel42"><text class="ma-list-num" style="color:{{sel242 ==1? '#31859c':'black'}}"  >260</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel43"><text class="ma-list-num" style="color:{{sel243 ==1? '#31859c':'black'}}"  >265</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel51"><text class="ma-list-num" style="color:{{sel251 ==1? '#31859c':'black'}}"  >270</text><text class="ma-list-text" >码</text></view>
+</view>
+</view>
+
+<view class="ma-style"   style="background:{{has_xiala_eur2==0 ? '#f3f3f3': '#e0f1f6'}}" >
+<image class='country' src="../../img/EUR.jpg"></image>
+<text class="ma-text" style='width:184rpx'>欧码</text>
+<view class="ma-right" >
+<text wx:if ='{{has_select2==1}}' class="ma-list-num" >{{eur2}}</text><text  wx:if ='{{has_select2==1}}'  class="ma-list-text" >码</text>
+<text  wx:if ='{{has_select2==0}}' class="ma-text" bindtap="xiala_eur">请选择</text>
+<image class="xiala-img" src="{{has_xiala_eur2==0 ? '../../img/xiala.png' : '../../img/hua.png'}}" bindtap="xiala_eur"></image>
+</view>
+</view>
+<view  wx:if ='{{has_xiala_eur2==1}}'  class="ma-list">
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel11"><text class="ma-list-num" style="color:{{sel211 ==1? '#31859c':'black'}}">35.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel12"><text class="ma-list-num" style="color:{{sel212 ==1? '#31859c':'black'}}">35.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel13"><text class="ma-list-num" style="color:{{sel213 ==1? '#31859c':'black'}}">36.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel21"><text class="ma-list-num" style="color:{{sel221 ==1? '#31859c':'black'}}">37.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel22"><text class="ma-list-num" style="color:{{sel222 ==1? '#31859c':'black'}}">37.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel23"><text class="ma-list-num" style="color:{{sel223 ==1? '#31859c':'black'}}">38.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel31"><text class="ma-list-num" style="color:{{sel231 ==1? '#31859c':'black'}}">38.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel32"><text class="ma-list-num" style="color:{{sel232 ==1? '#31859c':'black'}}">39.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel33"><text class="ma-list-num" style="color:{{sel233 ==1? '#31859c':'black'}}">40.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel41"><text class="ma-list-num" style="color:{{sel241 ==1? '#31859c':'black'}}">40.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel42"><text class="ma-list-num" style="color:{{sel242 ==1? '#31859c':'black'}}">41.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel43"><text class="ma-list-num" style="color:{{sel243 ==1? '#31859c':'black'}}">41.5</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel51"><text class="ma-list-num" style="color:{{sel251 ==1? '#31859c':'black'}}">42.0</text><text class="ma-list-text" >码</text></view>
+</view>
+</view>
+
+<view class="ma-style"   style="background:{{has_xiala_us2==0 ? '#F6F6F6': '#e0f1f6'}}">
+<image class='country' src="../../img/US.jpg"></image>
+<text class="ma-text" style='width:184rpx'>美码</text>
+<view class="ma-right" >
+<text wx:if ='{{has_select2==1}}' class="ma-list-num" >{{us2}}</text><text  wx:if ='{{has_select2==1}}'  class="ma-list-text" >码</text>
+<text  wx:if ='{{has_select2==0}}' class="ma-text" bindtap="xiala_us">请选择</text>
+<image class="xiala-img" src="{{has_xiala_us2==0 ? '../../img/xiala.png' : '../../img/hua.png'}}" bindtap="xiala_us"></image>
+</view>
+</view>
+<view  wx:if ='{{has_xiala_us2==1}}'  class="ma-list">
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel11"><text class="ma-list-num" style="color:{{sel211 ==1? '#31859c':'black'}}"> -- </text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel12"><text class="ma-list-num" style="color:{{sel212 ==1? '#31859c':'black'}}"> -- </text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel13"><text class="ma-list-num" style="color:{{sel213 ==1? '#31859c':'black'}}">4.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel21"><text class="ma-list-num" style="color:{{sel221 ==1? '#31859c':'black'}}">4.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel22"><text class="ma-list-num" style="color:{{sel222 ==1? '#31859c':'black'}}">5.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel23"><text class="ma-list-num" style="color:{{sel223 ==1? '#31859c':'black'}}">5.5</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel31"><text class="ma-list-num" style="color:{{sel231 ==1? '#31859c':'black'}}">6.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel32"><text class="ma-list-num" style="color:{{sel232 ==1? '#31859c':'black'}}">7.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel33"><text class="ma-list-num" style="color:{{sel233 ==1? '#31859c':'black'}}">7.5</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel41"><text class="ma-list-num" style="color:{{sel241 ==1? '#31859c':'black'}}">8.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel42"><text class="ma-list-num" style="color:{{sel242 ==1? '#31859c':'black'}}">9.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel43"><text class="ma-list-num" style="color:{{sel243 ==1? '#31859c':'black'}}">9.5</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel51"><text class="ma-list-num" style="color:{{sel251 ==1? '#31859c':'black'}}">10.0</text><text class="ma-list-text" >码</text></view>
+</view>
+</view>
+
+<view class="ma-style"  style="background:{{has_xiala_uk2==0 ? '#f3f3f3': '#e0f1f6'}}" >
+<image class='country' src="../../img/UK.jpg"></image>
+<text class="ma-text" style='width:184rpx'>英码</text>
+<view class="ma-right" >
+<text wx:if ='{{has_select2==1}}' class="ma-list-num" >{{uk2}}</text><text  wx:if ='{{has_select2==1}}'  class="ma-list-text" >码</text>
+<text  wx:if ='{{has_select2==0}}' class="ma-text" bindtap="xiala_uk">请选择</text>
+<image class="xiala-img" src="{{has_xiala_uk2==0 ? '../../img/xiala.png' : '../../img/hua.png'}}" bindtap="xiala_uk"></image>
+</view>
+</view>
+<view  wx:if ='{{has_xiala_uk2==1}}'  class="ma-list">
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel11"><text class="ma-list-num" style="color:{{sel211 ==1? '#31859c':'black'}}"> -- </text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel12"><text class="ma-list-num" style="color:{{sel212 ==1? '#31859c':'black'}}">2.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel13"><text class="ma-list-num" style="color:{{sel213 ==1? '#31859c':'black'}}">2.5</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel21"><text class="ma-list-num" style="color:{{sel221 ==1? '#31859c':'black'}}">3.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel22"><text class="ma-list-num" style="color:{{sel222 ==1? '#31859c':'black'}}">3.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel23"><text class="ma-list-num" style="color:{{sel223 ==1? '#31859c':'black'}}">4.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel31"><text class="ma-list-num" style="color:{{sel231 ==1? '#31859c':'black'}}">4.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel32"><text class="ma-list-num" style="color:{{sel232 ==1? '#31859c':'black'}}">5.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel33"><text class="ma-list-num" style="color:{{sel233 ==1? '#31859c':'black'}}">6.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel41"><text class="ma-list-num" style="color:{{sel241 ==1? '#31859c':'black'}}">6.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel42"><text class="ma-list-num" style="color:{{sel242 ==1? '#31859c':'black'}}">7.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel43"><text class="ma-list-num" style="color:{{sel243 ==1? '#31859c':'black'}}">8.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel51"><text class="ma-list-num" style="color:{{sel251 ==1? '#31859c':'black'}}">8.5</text><text class="ma-list-text" >码</text></view>
+</view>
+</view>
+
+<view class="ma-style"   style="background:{{has_xiala_jp2==0 ? '#F6F6F6': '#e0f1f6'}}">
+<image class='country' src="../../img/JP.jpg"></image>
+<text class="ma-text" style='width:184rpx'>日码</text>
+<view class="ma-right" >
+<text wx:if ='{{has_select2==1}}' class="ma-list-num" >{{jp2}}</text><text  wx:if ='{{has_select2==1}}'  class="ma-list-text" >码</text>
+<text  wx:if ='{{has_select2==0}}' class="ma-text" bindtap="xiala_jp">请选择</text>
+<image class="xiala-img" src="{{has_xiala_jp2==0 ? '../../img/xiala.png' : '../../img/hua.png'}}" bindtap="xiala_jp"></image>
+</view>
+</view>
+<view  wx:if ='{{has_xiala_jp2==1}}'  class="ma-list">
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel11"><text class="ma-list-num" style="color:{{sel211 ==1? '#31859c':'black'}}">21.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel12"><text class="ma-list-num" style="color:{{sel212 ==1? '#31859c':'black'}}">21.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel13"><text class="ma-list-num" style="color:{{sel213 ==1? '#31859c':'black'}}">22.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel21"><text class="ma-list-num" style="color:{{sel221 ==1? '#31859c':'black'}}">22.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel22"><text class="ma-list-num" style="color:{{sel222 ==1? '#31859c':'black'}}">23.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel23"><text class="ma-list-num" style="color:{{sel223 ==1? '#31859c':'black'}}">23.5</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel31"><text class="ma-list-num" style="color:{{sel231 ==1? '#31859c':'black'}}">24.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel32"><text class="ma-list-num" style="color:{{sel232 ==1? '#31859c':'black'}}">24.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel33"><text class="ma-list-num" style="color:{{sel233 ==1? '#31859c':'black'}}">25.0</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" style='background-color:#F6F6F6'>
+<view class="ma-list-item" bindtap="sel41"><text class="ma-list-num" style="color:{{sel241 ==1? '#31859c':'black'}}">25.5</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel42"><text class="ma-list-num" style="color:{{sel242 ==1? '#31859c':'black'}}">26.0</text><text class="ma-list-text" >码</text></view>
+<view class="ma-list-item" bindtap="sel43"><text class="ma-list-num" style="color:{{sel243 ==1? '#31859c':'black'}}">26.5</text><text class="ma-list-text" >码</text></view>
+</view>
+<view class="ma-list-row" >
+<view class="ma-list-item" bindtap="sel51"><text class="ma-list-num" style="color:{{sel251 ==1? '#31859c':'black'}}">27.0</text><text class="ma-list-text" >码</text></view>
+</view>
+</view>
+</view>
+
+
+<view class="duizhao" bindtap="toduizhao">查看鞋码对照表</view>
