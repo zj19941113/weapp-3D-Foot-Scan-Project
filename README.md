@@ -5,6 +5,9 @@
 
 ## 总览
 
+### 实际效果图
+![image](https://github.com/zj19941113/weapp-3D-Foot-Scan-Project/blob/master/Example/%E5%AE%9E%E9%99%85%E6%95%88%E6%9E%9C%E5%9B%BE.jpg)
+
 ### 环境
 
  - CodeIgniter 3.1.0
