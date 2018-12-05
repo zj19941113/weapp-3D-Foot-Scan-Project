@@ -16,20 +16,6 @@
  - php扩展: mbstring, curl
  - 没有用腾讯云的SDK. wafer相关配置，COS相关配置一律不用管
 
-### 后端文件结构
-
- - application/controllers 控制器
- - application/models 模型
- - application/config 配置文件
- - index.php 入口文件(在此已配置自动切换环境，无需手动操作)
- - uploads 上传文件仓库
- - uploads/pannel.php 查看服务器文件库(仅在`开发环境`可用)
- - system 系统核心文件 (不要乱动)
- - vendor (tx的东西不知道是啥，不要乱动)
-
-### 维护相关
-
- - api.weixin.qq.com 的DNS目前是写死的，如果 `login` 接口无法使用请检查DNS是否正确
 
 ### 开始使用
 
