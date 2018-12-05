@@ -332,4 +332,3 @@ Response 200
     }
 ```
 
-# weapp-3D-Foot-Scan-Project
